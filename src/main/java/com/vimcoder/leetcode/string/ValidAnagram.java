@@ -3,7 +3,15 @@ package com.vimcoder.leetcode.string;
 import java.util.HashMap;
 import java.util.Map;
 
-public class IsAnagram {
+/**
+ * https://leetcode-cn.com/problems/valid-anagram/description/
+ * 
+ * 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的一个字母异位词。
+ * 
+ * @author apple
+ *
+ */
+public class ValidAnagram {
 	
 	public boolean isAnagram2(String s, String t) {
 		int[] ints = new int[26];
@@ -36,6 +44,6 @@ public class IsAnagram {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(new IsAnagram().isAnagram2("ab", "a"));
+		System.out.println(new ValidAnagram().isAnagram2("ab", "a"));
 	}
 }
