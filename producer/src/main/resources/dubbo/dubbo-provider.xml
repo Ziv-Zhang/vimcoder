@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd 
+    	http://code.alibabatech.com/schema/dubbo 
+    	http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    	
+<!-- 	<dubbo:application name="dubbo-provider" />
+    
+    <dubbo:registry address="zookeeper://localhost:2181" />
+    
+    <dubbo:protocol name="dubbo" port="20880" /> -->
+    <!-- 设置调用的参数回调，指定回调的方法和对象 -->
+    <dubbo:service interface="com.vimcoder.dubbo.service.ICallbackService" ref="callbackService" connections="1" delay="11">
+    	<dubbo:method name="addListener">
+    		<dubbo:argument index="1" callback="true" />
+	        <!--也可以通过指定类型的方式-->
+	        <!--<dubbo:argument type="com.demo.CallbackListener" callback="true" />-->
+    	</dubbo:method>
+    </dubbo:service>
+    
+    <!-- <dubbo:service interface="com.vimcoder.dubbo.service.IStubService" ref="stubServiceImpl" stub="com.vimcoder.dubbo.service.StubServiceStub" /> -->
+    
+<!--     <dubbo:provider id="p1" timeout="5000" />
+    <dubbo:provider id="p2" timeout="5000" default="false"/> -->
+    
+    <dubbo:service interface="com.vimcoder.dubbo.service.IDemoService" class="com.vimcoder.dubbo.service.DemoProvider" />
+</beans>

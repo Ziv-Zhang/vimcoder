@@ -1,9 +1,0 @@
-syntax = "proto3";
-
-option java_package = "com.vimcoder.netty.protobuf";
-option java_outer_classname = "UserRespProto";
-
-message UserResp{
-	string code = 1;
-	string desc = 2;
-}

@@ -1,0 +1,2 @@
+myProtocol=com.vimcoder.dubbo.extension.MyProtocol
+myProtocolWrapper=com.vimcoder.dubbo.extension.MyProtocolWrapper

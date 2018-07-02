@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    	http://www.springframework.org/schema/beans/spring-beans-4.3.xsd 
+    	http://code.alibabatech.com/schema/dubbo 
+    	http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    
+    <dubbo:application name="dubbo-customer" />
+    
+    <dubbo:registry address="zookeeper://localhost:2181" />
+    
+    <dubbo:protocol name="dubbo" port="20880" />
+    <dubbo:protocol name="rmi" port="1099" />
+    
+    <dubbo:consumer check="false"/>
+    
+    <dubbo:reference id="mergeService" interface="com.vimcoder.dubbo.service.IMergeGroup" group="a,b" merger="true"/>
+    
+</beans>
