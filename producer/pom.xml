@@ -5,7 +5,7 @@
     <artifactId>vimcoder</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>producer</artifactId>
+  <artifactId>vimcoder-producer</artifactId>
   
   <dependencies>
 
