@@ -26,5 +26,5 @@
 <!--     <dubbo:provider id="p1" timeout="5000" />
     <dubbo:provider id="p2" timeout="5000" default="false"/> -->
     
-    <dubbo:service interface="com.vimcoder.dubbo.service.IDemoService" class="com.vimcoder.dubbo.service.DemoProvider" />
+    <dubbo:service interface="com.vimcoder.dubbo.service.IDemoService" class="com.vimcoder.dubbo.service.DemoProvider" protocol="dubbo"/>
 </beans>
